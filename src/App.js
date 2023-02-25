@@ -6,26 +6,30 @@ import {
   Route
 } from "react-router-dom";
 import Contact from './component/Contact';
+import Footer from './component/Footer';
 
 function App() {
   return (
     <>
-      {/* <Switch> */}
-        <Navbar />
-        <div className="text-center">
-          <h1>Text Manupulate</h1>
-        </div>
-        {/* <Route exact path="/"  >
-          <Home/>
-        </Route>
-        <Route exact path="/contact">
-          <Contact/>
-        </Route>
-      </Switch> */}
-          <Home/>
+      <Navbar />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/contact" component={Contact}/>
+      </Switch>
+      <Footer/>
     </>
-
   );
 }
 
 export default App;
+
+
+// import React from "react";
+// import Parent from './Parent.js';
+// export default function App() {
+//   return (
+//     <div>
+//        <Parent />
+//     </div>
+//   );
+// }
